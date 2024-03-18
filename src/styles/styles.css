@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --background: hsl(0, 0%, 98%);
+  --elements: hsl(0, 0%, 100%);
+}
+ 
+[data-theme='dark'] {
+  --elements: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+}
+
+html {
+  color: var(--text);
+  background-color: var(--background);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.2s ease-in;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* NAVIGATION */
+nav {
+  height: 3.5rem;
+  background-color: var(--elements);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  padding-inline: 5rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  position:sticky;
+  top: 0;
+  z-index: 2;
+}
+
+nav h1 {
+  font-size: 1.2rem;
+}
+
+.toggleTheme button {
+  background: transparent;
+  font-size: 1.2rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.toggleTheme span,
+.moon-icon {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (max-width: 660px) {
+  nav  {
+    padding: 8% 10%;
+  }
+}
+
+/* INPUT CONTAINER */
+.input_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  padding: 3rem 5rem;
+  gap: 12px;
+}
+
+.input_search_container {
+  position: relative;
+}
+
+.input_search {
+  width: 100%;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  background: var(--elements);
+  color: var(--input);
+}
+
+.input_search::placeholder {
+  color: var(--text);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter_input {
+  padding: 0.8rem 5rem 0.8rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: var(--elements);
+  color: var(--text);
+}
+
+@media (max-width: 660px) {
+  .input_container {
+    flex-direction: column;
+    padding: 10%;
+  }
+
+  .input_search_container,
+  .filter_input  {
+    width: 100%;
+  }
+}
+
+/* CARD CONTAINER */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding-inline: 5rem;
+}
+
+.card {
+  min-width: 250px;
+  border-radius: 6px;
+  background: var(--elements);
+}
+
+.card img {
+  object-fit: fill;
+  width: 100%;
+  height: 180px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card_info {
+  padding: 20px;
+}
+
+.card_info p {
+  font-size: 1rem;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.card_info span {
+  font-weight: 300;
+}
+
+@media (max-width: 660px) {
+  .card_container {
+    padding-inline: 10%;
+  }
+  
+  .card img {
+    height: 230px;
+  }
+}
+
+/* DETAIL PAGE */
+.detail_page {
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background: var(--background);
+  min-height: calc(100vh - 3.5rem);
+}
+
+.back_button {
+  background: var(--elements);
+  color: var(--text);
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  padding: 8px 28px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_detail {
+  display: flex;
+  gap: 4.5rem;
+  justify-content: space-between;
+}
+
+.card_detail h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.card_img {
+  flex-basis: 40%;
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.card_img img {
+  object-fit: fill;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.card_detail .card_info_detail {
+  padding-block: 20px;
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.country_name {
+  display: flex;
+  gap: 10%;
+  justify-content: space-between;
+}
+
+.country_name span,
+.border_countries span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.country_name p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.border_countries span {
+  line-height: unset;
+  font-size: 1.1rem;
+}
+
+.border_countries {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+}
+
+.border_button {
+  background: var(--elements);
+  color: var(--text);
+  padding: 4px 28px;
+  margin: 2px 6px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1000px) {
+  .detail_page {
+    padding: 10%;
+  }
+
+  .card_detail {
+    flex-direction: column;
+    gap: 10%;
+  }
+
+  .card_img img {
+    max-height: 300px;
+  }
+
+  .country_name {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* LOADING */
+.loading {
+  height: 100vh;
+  width: 100vw;
+  line-height: 100vh;
+  text-align: center;
+  font-size: x-large;
+}
+
+.not_found {
+  text-align: center;
+  font-size: x-large;
+}
