@@ -14,7 +14,6 @@ class Dashboard extends React.Component {
       country: '',
       regions: [],
       region: '',
-      loading: true 
     };
   
     this.onSearch = this.onSearch.bind(this);
@@ -25,7 +24,7 @@ class Dashboard extends React.Component {
     getCountries()
       .then(({ data, error }) => {
         if (error) {
-          this.setState({ error: error.message, loading: false });
+          this.setState({ error: error.message });
         } else {
           const uniqueRegions = [];
           data.forEach(country => {
@@ -36,13 +35,12 @@ class Dashboard extends React.Component {
           this.setState({
             countries: data,
             originalCountries: data,
-            regions: uniqueRegions,
-            loading: false 
+            regions: uniqueRegions
           });
         }
       })
       .catch(error => {
-        this.setState({ error: error.message, loading: false});
+        this.setState({ error: error.message });
       });
   }
 
@@ -51,7 +49,6 @@ class Dashboard extends React.Component {
       prevState.country !== this.state.country ||
       prevState.region !== this.state.region
     ) {
-      this.setState({ loading: true });
       if (this.state.country === '' && this.state.region === '') {
         getCountries()
           .then(({ data, error }) => {
@@ -114,9 +111,14 @@ class Dashboard extends React.Component {
   }
 
   render() {  
-    if (this.state.loading) {
-      return <div className='loading'>Loading...</div>; 
-    } else if(this.state.countries.length > 0) {
+    if(this.state.originalCountries.length === 0){
+      return (
+        <>
+          <div className='loading'>Loading...</div>
+        </>
+      )
+    }
+    if(this.state.countries.length > 0) {
       return (
         <>
           <InputContainer onSearch={this.onSearch} regions={this.state.regions} onRegionChange={this.onRegionChange}/>

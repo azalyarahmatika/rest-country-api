@@ -298,9 +298,10 @@ nav h1 {
 
 /* LOADING */
 .loading {
-  height: 100vh;
-  width: 100vw;
-  line-height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: x-large;
 }
