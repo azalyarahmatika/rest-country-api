@@ -97,7 +97,7 @@ nav h1 {
   border: none;
   border-radius: 4px;
   background: var(--elements);
-  color: var(--input);
+  color: var(--text);
 }
 
 .input_search::placeholder {
@@ -297,16 +297,11 @@ nav h1 {
 }
 
 /* LOADING */
-.loading {
+.loading, .not_found {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: x-large;
-}
-
-.not_found {
   text-align: center;
   font-size: x-large;
 }
