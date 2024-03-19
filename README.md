@@ -42,5 +42,5 @@ Users should be able to:
 ## Author
 
 - Website - [Azalya Rahmatika](https://www.azalyarahmatika.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/azalyarahmatika)
-- LinkedIn - [@yourusername](https://www.linkedin.com/in/azalyarahmatika/)
+- Frontend Mentor - [@azalyarahmatika](https://www.frontendmentor.io/profile/azalyarahmatika)
+- LinkedIn - [@azalyarahmatika](https://www.linkedin.com/in/azalyarahmatika/)
