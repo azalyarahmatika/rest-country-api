@@ -64,8 +64,16 @@ nav h1 {
 
 @media (max-width: 660px) {
   nav  {
-    padding: 8% 10%;
+    padding: 22px 10%;
   }
+
+  nav h1,
+  .toggleTheme button,
+  .toggleTheme span,
+  .moon-icon {
+    font-size: 1.125rem;
+  }
+
 }
 
 /* INPUT CONTAINER */

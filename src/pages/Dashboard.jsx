@@ -115,7 +115,7 @@ class Dashboard extends React.Component {
 
   render() {  
     if (this.state.loading) {
-      return <div>Loading...</div>; 
+      return <div className='loading'>Loading...</div>; 
     } else if(this.state.countries.length > 0) {
       return (
         <>

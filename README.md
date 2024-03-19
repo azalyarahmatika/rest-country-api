@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/azalyarahmatika/country-rest-api)
-- Live Site URL: [Github Pages](https://azalyarahmatika.github.io/country-rest-api/)
+- Live Site URL: [Vercel](https://rest-country-api-pearl.vercel.app/)
 
 ### Built with
 
