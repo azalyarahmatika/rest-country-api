@@ -7,8 +7,8 @@ function FilterInput({ regions, onRegionChange }) {
 
   return (
     <>
-      <label htmlFor="region"></label>
-      <select className="filter_input" id="region" onChange={onChange} >
+      <label htmlFor="region" style={{ display: 'none'}}>Filter By Region</label>
+      <select className="filter_input" id="region" onChange={onChange} aria-labelledby="region">
       <option value="">Filter By Region</option>
       {regions.map((region, index) => (
         <option key={index} value={region}>{region}</option>
